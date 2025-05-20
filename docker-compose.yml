@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:17.4
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - target: 5432
+        published: 5432
+        protocol: tcp
+        mode: host
